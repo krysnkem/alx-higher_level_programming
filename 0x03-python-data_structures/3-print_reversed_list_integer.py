@@ -2,7 +2,7 @@
 
 
 def print_reversed_list_integer(my_list=[]):
-    list_cpy = my_list.copy()
-    list_cpy.reverse()
-    for item in list_cpy:
-        print("{:d}".format(item))
+    if my_list is None:
+        return
+    for idx in reversed(range(len(my_list))):
+        print("{:d}".format(my_list[idx]))
