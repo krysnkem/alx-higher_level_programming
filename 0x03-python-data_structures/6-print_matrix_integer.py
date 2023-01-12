@@ -2,6 +2,8 @@
 
 
 def print_matrix_integer(matrix=[[]]):
+    if matrix is None:
+        return;
     matrix_len = len(matrix)
     last_row_idx = matrix_len - 1
     for row_index in range(matrix_len):
