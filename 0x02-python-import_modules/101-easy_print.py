@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    __import__("os").write(1, b"#pythoniscool\n")
+    exec('import subprocess; subprocess.call(["echo", "#pythoniscool"])')
