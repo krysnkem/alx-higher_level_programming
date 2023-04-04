@@ -7,14 +7,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initializes the class"""
-        if width:
-            self.width = width
-        else:
-            self.width = 0
-        if height:
-            self.height = height
-        else:
-            self.height = 0
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -35,7 +29,7 @@ class Rectangle:
         """Retreives the width"""
         return self.__height
 
-    @width.setter
+    @height.setter
     def height(self, value):
         "Sets the height property with a value"
         if type(value) != int:
@@ -45,9 +39,10 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        print(self.width, self.height)
         return self.width * self.height
 
     def perimeter(self):
         if self.width == 0 or self.height == 0:
             return 0
-        return (2 * self.width) + (2 * self.height)
+        return 2 * (self.width + self.height)
