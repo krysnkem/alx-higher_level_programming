@@ -6,7 +6,7 @@ class Rectangle:
     """Rectangle class that defines a rectangle"""
 
     number_of_instances = 0
-    print_symbol = "#"
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """Initializes the class"""
@@ -20,7 +20,7 @@ class Rectangle:
         string = ""
         for h in range(self.height):
             for w in range(self.width):
-                string += str(self.__class__.print_symbol)
+                string += "{}".format(self.print_symbol)
             if (h < self.height - 1):
                 string += "\n"
         return string
