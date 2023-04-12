@@ -8,16 +8,17 @@ Tests the ``7-base_geometry`` module
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 ...
-[TypeError] <name> must be an integer
+[TypeError] name must be an integer
 >>> try:
 ...     bg.integer_validator("age", 0)
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 ...
-[ValueError] <name> must be greater than 0
+[ValueError] age must be greater than 0
 >>> try:
 ...     bg.integer_validator("distance", -4)
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 ...
-[ValueError] <name> must be greater than 0
+[ValueError] distance must be greater than 0
+
