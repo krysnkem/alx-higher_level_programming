@@ -32,12 +32,14 @@ class Rectangle(BaseGeometry):
         self.__height = height
         BaseGeometry.__init__(self)
 
-
     def area(self):
+        """returns the area of rectangle"""
         return self.__width * self.__height
 
     def __str__(self):
+        """Returns the string form of this rectangle"""
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
 
 class Square(Rectangle):
     """Square class inherits from Rectangle class"""
@@ -49,4 +51,5 @@ class Square(Rectangle):
         Rectangle.__init__(self, size, size)
 
     def __str__(self):
+        """Returns the string form of this square"""
         return "[Square] {}/{}".format(self.__size, self.__size)
