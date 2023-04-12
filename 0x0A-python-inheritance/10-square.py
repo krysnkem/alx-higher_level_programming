@@ -40,8 +40,10 @@ class Rectangle(BaseGeometry):
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
 
 class Square(Rectangle):
+    """Square class inherits from Rectangle class"""
 
     def __init__(self, size):
+        """instanciates the Squqre class"""
         self.integer_validator("size", size)
         self.__size = size
         Rectangle.__init__(self, size, size)
